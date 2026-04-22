@@ -1,0 +1,29 @@
+---
+title: "Site Map"
+---
+
+# Site Map
+
+## Main Pages
+
+| Page | URL | Description |
+|------|-----|-------------|
+| Home | `/` | Project overview and quick links |
+| About | `/about.qmd` | Project goals, timeline, context |
+| Team | `/team.qmd` | Researchers and advisory group |
+| Approach | `/approach.qmd` | Methodology details |
+| Research | `/research.qmd` | Literature review and publications |
+| Tools & Data | `/tools.qmd` | Datasets and software |
+| Updates | `/updates.qmd` | News and milestones |
+
+## Research Outputs
+
+- [Literature Review (HTML)](/review.qmd)
+- [Literature Review (PDF)](/review.pdf)
+- [Bibliography](/references.bib)
+
+## External Links
+
+- [GitHub organisation](https://github.com/multilevelos) — source code and data
+- [Active Travel England](https://www.gov.uk/government/organisations/active-travel-england) — funder
+- [Plan.activetravelengland.gov.uk](https://plan.activetravelengland.gov.uk) — ATE's design platform

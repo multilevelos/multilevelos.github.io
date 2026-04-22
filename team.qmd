@@ -1,0 +1,61 @@
+---
+title: "Project Team"
+description-meta: "Research team and advisory group for the MMLoS project"
+---
+
+# Project Team
+
+The MMLoS project is a collaboration between two universities and benefits from an expert advisory group.
+
+## Core Team
+
+| Role | Name | Affiliation | Expertise |
+|------|------|-------------|-----------|
+| **Principal Investigator** | Dr Tom Cohen | University of Westminster · Active Travel Academy | Transport policy, multi-modal level of service, street design |
+| **Co-Investigator** | Prof Robin Lovelace | University of Leeds · Institute for Transport Studies | Transport data science, GIS, active travel modelling, open-source tools |
+| **Research Assistant** | [TBD – Westminster student] | University of Westminster | Literature review, data collation, analysis |
+| **Research Software Engineer** | [To be recruited] | — | Rust, Python, web development, tool implementation |
+| **Research Fellow** | [To be recruited] | — | Transport planning, stakeholder engagement, case-study coordination |
+
+## Subcontractors
+
+### IFP-r (International Federation of Pedestrians – Research Branch)
+
+IFP-r will conduct **3D LiDAR scanning** at two case-study locations, producing high-resolution point clouds that capture:
+
+- Pavement geometry and surface quality
+- Kerb heights, dropped kerbs, tactile paving
+- Lane widths, carriageway conditions
+- Obstructions, foliage overhang, pinch points
+
+This data will enable precise measurement of infrastructure attributes relevant to pedestrian and wheelchair user Level of Service.
+
+**IFP-r Team:**
+- **Hendrik van Waeg** – Research Engineer
+- **Alan Luis Lacey Raposo** – Project Coordinator
+
+IFP-r has prior experience in European Horizon projects (REALLOCATE, JUST STREETS) and has collected LiDAR data across cities including Lyon, Gothenburg, Barcelona, Bologna, and Utrecht.
+
+## Design Advisory Group (DAG)
+
+The DAG provides expert guidance on methodological and philosophical questions fundamental to the MMLoS tool's operation. Members serve pro bono.
+
+| Name | Affiliation | Expertise |
+|------|-------------|-----------|
+| **Rachel Aldred** | University of Westminster · Active Travel Academy | Active travel, road safety, cycling policy, Propensity to Cycle Tool |
+| **Peter White** | University of Westminster (Emeritus) | Public transport, bus service planning, transport modelling |
+| **Jamie Furlong** | University of Westminster · Active Travel Academy | Quantitative methods, statistics, cycleability measures |
+
+## Steering Group
+
+The project Steering Group includes representatives from:
+
+- **Active Travel England** (client)
+- **Local authority partners** — Essex County Council, Transport for West Midlands, Leeds City Council
+- **Academic partners** — University of Westminster, University of Leeds
+
+The Steering Group meets approximately every two months to review progress, advise on direction, and help select case-study locations.
+
+---
+
+*Interested in joining the team or collaborating? Contact [Tom Cohen](mailto:t.cohen@westminster.ac.uk) or [Robin Lovelace](mailto:r.lovelace@leeds.ac.uk).*

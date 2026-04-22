@@ -1,0 +1,78 @@
+---
+title: "Tools & Data"
+description-meta: "Data sources and software tools used or produced by the MMLoS project"
+---
+
+# Tools & Data Resources
+
+## Datasets Under Consideration
+
+During the project we will use and evaluate the following datasets:
+
+### National & Open Data
+| Dataset | Provider | Coverage | Use |
+|---------|----------|----------|-----|
+| **OpenStreetMap (OSM)** | OpenStreetMap contributors | Global | Base network, infrastructure tags (cycleways, crossings, surfaces) |
+| **OSM-RN (OS Multi-modal Routing Network)** | Ordnance Survey | England & Wales | Link geometry, average speeds, road widths |
+| **STATS19** | DfT | England | Road traffic collisions (pedestrians, cyclists, horses) |
+| **DfT Road Traffic Statistics** | DfT | England | Annual average daily flows, vehicle classifications |
+| **National Travel Survey (NTS)** | DfT | England | Trip purposes, mode choice reasons, travel patterns |
+| **Census / Census 2021** | ONS | England | Population, commuting flows, demographic data |
+| **Bus Open Data Service (BODS)** | DfT | England | Stop/route timetables, actual running times, vehicle info |
+
+### Project-Specific & Derived
+| Dataset | Source | Status |
+|---------|--------|--------|
+| **Propensity to Cycle Tool (PCT) data** | ITS Leeds | Already available for Leeds case study |
+| **LiDAR point clouds** | IFP-r (subcontract) | To be collected at 2 case-study sites (2026–2027) |
+| **Case-study traffic counts** | Local authority partners | TBD — Essex, West Midlands, Leeds |
+
+## Software Tools
+
+### Existing Tools We Rely On
+
+- **OSMnx** [@barron2014osmnx] — download and analyse OSM street networks in Python
+- **QGIS** — GIS analysis and visualisation
+- **R** (with `sf`, `tidytransit`, `osmdata`) — statistical analysis and network modelling
+- **Pandana** — network accessibility analysis
+
+### Tools in Development
+
+| Tool | Status | Purpose |
+|------|--------|---------|
+| **MMLoS Python library** | Design phase | Core calculation engine for link and junction scores |
+| **QGIS plugin** | Concept | Desktop tool for local authority users |
+| **Web application** | Planned | Browser-based interactive tool (see [Approach](/approach.qmd)) |
+
+### External Platforms Referenced
+
+| Platform | URL | Note |
+|----------|-----|------|
+| **Plan.activetravelengland.gov.uk** | Browse & Sketch tools | ATE's design platform; we aim to integrate with or complement it |
+| **Streetmix** | https://streetmix.net/ | Collaborative street design; useful for engagement |
+| **3DStreet** | https://3dstreet.app/ | 3D visualisation of street cross-sections |
+
+## Repository Structure
+
+All project code will be archived under the [multilevelos GitHub organisation](https://github.com/multilevelos):
+
+| Repository | Purpose |
+|------------|---------|
+| `multilevelos/multilevelos.github.io` | This website |
+| `multilevelos/bid` | Original research proposal and supporting documents |
+| `multilevelos/tools` | Core MMLoS toolkit (Python, R, or both — TBD) |
+| `multilevelos/analysis` | Statistical analysis notebooks and results |
+| `multilevelos/data-schemas` | Data model definitions and validation rules |
+
+More repositories will be added as the project progresses.
+
+## Data Privacy & Ethics
+
+- All public data used will be openly licensed (OSM, government open data)
+- Any survey data collected will be anonymised and stored in compliance with UK GDPR
+- The project has been designed with **data minimisation** principles: we will only collect data necessary for the MMLoS methodology
+- LiDAR scans will be processed to remove personally identifiable information (faces, vehicle registration plates) before any data is shared
+
+---
+
+*For questions about data access or code use, please contact the [project team](/team.qmd).*

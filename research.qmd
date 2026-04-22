@@ -1,0 +1,48 @@
+---
+title: "Research & Literature"
+description-meta: "Literature review and research publications related to MMLoS"
+---
+
+# Research & Publications
+
+This page summarises the research outputs and literature underpinning the MMLoS project.
+
+## Project Publications
+
+| Title | Venue | Status |
+|-------|-------|--------|
+| "Towards a True Multi-Modal Level of Service: Methodology and Case Studies" | (TBD — targeting NeurIPS/ICML 2027) | In preparation |
+| "Leveraging OpenStreetMap and Street Imagery for City-Wide Level-of-Service Assessment" | (TBD) | Planned |
+| "Comparing Pedestrian, Cycling, and Transit Level of Service: A Calibration Study" | (TBD) | Planned |
+
+## Background Reading
+
+Our work builds on several bodies of research:
+
+1. **Multimodal LOS in the United States** — FDOT's QLOS program, NCHRP Report 616, and HCM multimodal methods [@guttenplan2001multimodal; @nchrp616; @highway_capacity_manual_7]
+2. **Complete Streets performance measurement** — state and local practices in measuring multimodal street quality [@nacto2016street; @fdot2015qlos]
+3. **Active travel appraisal in the UK** — ATE design review tools, Propensity to Cycle Tool, WebTAG framework [@govuk_ate_tools; @lovelace2016pct; @webtag]
+4. **Open data for transport planning** — OpenStreetMap quality assessment, OSMnx network analysis [@barron2014osmnx; @haklay2010osm]
+5. **Computer vision for infrastructure assessment** — image-to-3D reconstruction, sidewalk accessibility mapping, automated road quality detection [@trellis3d; @microsoft2024trellis; @royalsociety2024sidewalk; @wang2022machine]
+
+A full literature review document is available [as a Quarto paper](/review.qmd) (TL;DR: 20 pages, 35+ citations). You can also download:
+
+- [📄 PDF version](/review.pdf) (69 KB)
+- [📚 BibTeX bibliography](/references.bib) (37 entries)
+
+## Key References
+
+::: {.callout-note}
+Our [full bibliography](/references.bib) contains 37 entries covering transportation research, computer vision, citizen science, and urban planning.
+:::
+
+<div id="refs"></div>
+
+## Related Tools & Datasets
+
+See the [Tools & Data](/tools.qmd) page for a complete inventory of datasets and software relevant to MMLoS.
+
+---
+
+*This page will be updated as publications progress. For day-to-day updates, see the [Updates](/updates.qmd) page.*
+

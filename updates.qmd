@@ -1,0 +1,28 @@
+---
+title: "Project Updates"
+description-meta: "News and progress updates from the MMLoS project"
+date-modified: "2026-02-22"
+---
+
+# Project Updates
+
+## February 2026 — Project Kick-off
+
+- **Start date:** 1 April 2026 confirmed
+- **Team recruitment:** underway for Research Assistant, Research Software Engineer, and Research Fellow positions at University of Westminster
+- **Steering Group formation:** invitations sent to local authority partners and ATE representatives
+- **Literature review:** completed and published as a Quarto document — see the [Research](/research.qmd) page
+
+## Upcoming Milestones
+
+- **Apr–May 2026:** Confirm case-study locations; initial design advisory group meeting
+- **Jun 2026:** Data collection plan finalised; baseline datasets acquired
+- **Jul 2026:** Methodology white paper draft; first prototype scoring function
+
+## Older Updates
+
+_This section will be populated as the project progresses._
+ 
+---
+
+*For historical updates, see the [`multilevelos/bid` repository](https://github.com/multilevelos/bid) for the original proposal documentation.*

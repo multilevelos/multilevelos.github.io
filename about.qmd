@@ -1,0 +1,98 @@
+---
+title: "About the MMLoS Project"
+description-meta: "Project overview, goals, and context for the Multi-Modal Level of Service research"
+---
+
+# Project Overview
+
+The **Multi-Modal Level of Service (MMLoS)** project is a research programme commissioned by **Active Travel England (ATE)** to develop a new measurement framework and proof-of-concept tool for evaluating how streets support active and sustainable travel modes.
+
+## The Problem
+
+Transport appraisal historically focuses on **motor vehicle Level of Service (LOS)**—measures like delay, speed, and volume-to-capacity ratio. These metrics dominate investment decisions despite failing to capture the user experience for:
+
+- **Pedestrians** — quality of footways, crossing delays, perceived safety
+- **Cyclists** — lane width, separation from traffic, junction treatment
+- **Public transport users** — service frequency, stop amenities, reliability
+- **Wheelchair users** — pavement quality, dropped kerbs, gradients
+
+When each mode is assessed separately—as current practice does—it becomes difficult to answer a fundamental planning question: *how do design choices trade off across user groups*? A wider bus lane might improve transit LOS but worsen cycling and pedestrian LOS. A raised zebra crossing aids pedestrians but may increase vehicle delay.Decision-makers need a tool that places these impacts on a **common scale**.
+
+## Our Approach
+
+### Phase 1: Literature & Synthesis (Completed Q1 2026)
+Reviewed existing MMLoS frameworks, including:
+- US FDOT/NCHRP multimodal LOS models [@guttenplan2001multimodal; @nchrp616]
+- Highway Capacity Manual multimodal methods [@highway_capacity_manual_7]
+- Complete Streets performance measurement [@nacto2016street]
+- UK ATE scheme review tools and WebTAG appraisal framework
+
+[See the full literature review →](/research.qmd)
+
+### Phase 2: Methodology Development (2026)
+Building on the review, we will:
+
+1. **Identify common attributes** across modes (e.g., effective width, user density, delay)
+2. **Calibrate common scales** that allow cross-modal comparison (using stated preference research where available)
+3. **Integrate mode-specific attributes** without breaking commensurability
+4. **Design junction-level models** that link network connectivity to user experience
+
+### Phase 3: Data Integration & Tooling (2026–2027)
+Leverage open and accessible data sources:
+
+- **OpenStreetMap** — network topology, infrastructure tags (cycleways, crossings, surfaces)
+- **Street-level imagery** (where available) — automated geometry extraction via computer vision / image-to-3D
+- **Transport datasets** — STATS19 collisions, Bus Open Data Service (BODS), DfT traffic counts
+- **Case study ground-truthing** — local partner data from Leeds, Essex, West Midlands
+
+We will produce a **web-based tool** that:
+- Accepts a location (address or map click)
+- Computes MMLoS scores for nearby links and junctions
+- Visualises trade-offs across modes
+- Supports scenario testing (e.g., "what if a bus lane were added?")
+
+### Phase 4: Validation & Documentation (2027)
+- Proof-of-concept testing across three case-study areas
+- User evaluation with local authority partners
+- Full documentation for ATE integration and future development
+
+## Project Timeline
+
+| Phase | Period | Key Milestones |
+|-------|--------|----------------|
+| **Setup & Lit Review** | Apr–Jul 2026 | Literature review report, methodology white paper |
+| **Method Development** | Aug 2026–Jan 2027 | Tool structure specification, calibration dataset |
+| **Implementation** | Feb–Jun 2027 | Working web tool, case study results |
+| **Validation & Delivery** | Jul–Sep 2027 | Final report, documentation, handover to ATE |
+
+The project start date is **1 April 2026**. All outputs will be published as open-source where possible.
+
+## Research Team
+
+- **Principal Investigator:** Dr Tom Cohen (University of Westminster, Active Travel Academy)
+- **Co-Investigator:** Prof Robin Lovelace (University of Leeds, Institute for Transport Studies)
+- **Research Assistant:** [To be recruited – Westminster]
+- **Research Software Engineer:** [To be recruited]
+- **Research Fellow / Stakeholder Lead:** [To be recruited]
+
+**Subcontractors:**
+- **IFP-r** (International Federation of Pedestrians – research branch): 3D LiDAR scanning and point cloud analysis
+- **Design Advisory Group** (pro bono): Rachel Aldred, Peter White, Jamie Furlong
+
+## Funders & Partners
+
+This project is funded by **Active Travel England** as part of its research programme to improve tools and guidance for active travel scheme design and appraisal.
+
+We are grateful to our **Steering Group** partners—including local authorities from Essex, West Midlands, and Leeds—for their guidance and data access.
+
+## Outputs
+
+1. **MMLoS method specification** — methodological report detailing scoring functions and data requirements
+2. **Proof-of-concept web tool** — usable by ATE and pilot local authorities
+3. **Peer-reviewed paper(s)** — detailing methodology and findings
+4. **Open-source code** — hosted under the [multilevelos GitHub organisation](https://github.com/multilevelos)
+5. **Documentation and guidance** — for tool use and further development
+
+---
+
+*This page provides an overview. For technical details, see the [Research](/research.qmd) section. For status updates, see [Updates](/updates.qmd).*

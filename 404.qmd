@@ -1,0 +1,18 @@
+---
+title: "Page Not Found"
+---
+
+# 404 — Page Not Found
+
+The page you're looking for doesn't exist (yet).
+
+Try:
+
+- 🏠 [Home](/)
+- 📚 [Research](/research.qmd)
+- 👥 [Team](/team.qmd)
+- 🔧 [Approach](/approach.qmd)
+
+Or check the [Full Site Map](/sitemap.qmd).
+
+If you think this is an error, please [open an issue](https://github.com/multilevelos/multilevelos.github.io/issues).

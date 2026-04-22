@@ -1,0 +1,203 @@
+---
+title: "Multi-Modal Level of Service: A Review of Existing Literature and Approaches"
+author:
+  - name: "Robin Lovelace"
+    affiliation: "University of Leeds, Institute for Transport Studies"
+  - name: "Tom Cohen"
+    affiliation: "University of Westminster, Active Travel Academy"
+date: "February 2026"
+format:
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    fig-width: 6.5
+    fig-height: 4.5
+    fig-dpi: 300
+    include-in-header:
+      text: |
+        \usepackage{hyperref}
+        \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+  html:
+    toc: true
+    theme: cosmo
+execute:
+  echo: false
+  warning: false
+  message: false
+bibliography: references.bib
+---
+
+# Introduction
+
+Multi-Modal Level of Service (MMLoS) is an approach to evaluating the quality of transportation facilities from the perspective of multiple user groups—pedestrians, cyclists, public transit riders, and motor vehicle drivers—within a unified framework. Unlike traditional Level of Service (LOS) measures, which typically focus almost exclusively on motor vehicle throughput and delay [@highway_capacity_manual], MMLoS seeks to provide a more balanced, equitable assessment of how street designs and operations serve diverse travel needs.
+
+The development of MMLoS gained momentum in the United States during the late 1990s and early 2000s, driven by legislative mandates such as Florida's 1999 multimodal transportation districts legislation, which required the Florida Department of Transportation (FDOT) to develop methods for measuring multi-modal performance [@guttenplan2001multimodal]. Simultaneously, national research initiatives like the National Cooperative Highway Research Program (NCHRP) produced guidance on applying MMLoS to urban streets, culminating in NCHRP Report 616 and the integration of multimodal service methods into the *Highway Capacity Manual* (HCM) [@trb2010hcm; @nchrp616].
+
+In this review, we survey the evolution of MMLoS thinking from early multimodal conceptual work to contemporary implementations, identifying both the progress made and persistent gaps that motivate new tool development. Our focus is primarily on approaches applicable to urban street networks—arterials, junctions, and local streets—where active travel modes (walking, cycling) and public transit are most directly affected by design and operational decisions.
+
+# Historical Context: The US DoT Effort and Early MMLoS Frameworks
+
+A pivotal early contribution to MMLoS was the work published in *Transportation Research Record* 1776 by Guttenplan, Landis, Crider, and McLeod (2001) [@guttenplan2001multimodal]. This paper, referenced by the user as an "interesting attempt to combine different measures," represented a significant step beyond the automobile-centric LOS paradigm. The authors presented planning-level methods for determining LOS for bus users, pedestrians, and bicyclists on arterial corridors.
+
+The core insight of this work—and a theme that resonates through later MMLoS frameworks—was that the traditional HCM focus on vehicle delay and volume-to-capacity ratios fails to capture the user experience for non-motorized modes. As Guttenplan et al. noted:
+
+> "The Highway Capacity Manual's (HCM) assessment of arterial LOS does not describe the quality of transportation service provided by the facility as much as it describes the quality of service provided to the through vehicle (automobile) users on the facility... it does not address the service that the arterial provides to other major potential modes (e.g., transit, walking, bicycling) or allow a multimodal LOS analysis."
+
+This critique remains highly relevant today. The paper highlighted that for pedestrians and bicyclists, quality of service is influenced less by crowd density (the focus of the 2010 HCM) and more by factors such as **lateral separation** from motor traffic, motor vehicle volumes and speeds, and transit service frequency [@guttenplan2001multimodal].
+
+The Florida-based research that underpinned this work helped establish the conceptual foundation for modern MMLoS: that streets should be evaluated per mode, with each mode's LOS expressed as a letter grade (typically A–F), and that these separate grades should inform design decisions rather than forcing a single composite score.
+
+# Institutionalization: From NCHRP to the Highway Capacity Manual
+
+Building on early research, the NCHRP and TRB further developed MMLoS methodologies. **NCHRP Report 616**, *"Multimodal Level of Service Analysis for Urban Streets: User's Guide"* [@nchrp616], provided detailed, practitioner-oriented procedures for computing LOS across four modes: auto drivers, transit passengers, bicyclists, and pedestrians. This document specifies separate models for each mode, using different input variables:
+
+| Mode | Key Input Factors | Model Type |
+|------|------------------|------------|
+| **Auto** | Stops per mile, proportion of intersections with exclusive left-turn lanes | Ordered logistic regression |
+| **Transit** | Bus headway factor, perceived travel time factor, pedestrian LOS to stops | Composite index |
+| **Bicycle** | Lane width, traffic volumes, heavy vehicle proportion, pavement condition | Factor-based scoring |
+| **Pedestrian** | Sidewalk width, traffic volumes, separation barriers, crossing delays | Factor-based scoring |
+
+These models were subsequently incorporated into the **Highway Capacity Manual (HCM)**. The 6th edition (2016) and 7th edition (2022) include multimodal LOS methods for urban streets [@trb2016hcm; @trb2023hcm]. However, the HCM approach continues to use a **separate-mode** structure—computing independent LOS ratings per mode without aggregation—which raises the question of how decision-makers should synthesize across modes when trade-offs arise.
+
+# Current State of Practice: Complete Streets and Design Guidance
+
+MMLoS concepts have been adopted in several US state and local context-sensitive design frameworks, notably through the **Complete Streets** movement. Several state DOTs use MMLoS as a performance measure for design compliance:
+
+- **Florida DOT** pioneered MMLoS integration into their context-based solutions handbook, explicitly balancing LOS across modes [@fdot2025qlos].
+- **California** and **Washington State** have developed their own multimodal performance indicator systems that parallel FDOT's work [@wsdot2017assessment].
+
+The **ITE (Institute of Transportation Engineers)** and **NACTO (National Association of City Transportation Officials)** have also advanced MMLoS-consistent design guidance, though typically through qualitative principles (e.g., *Urban Street Design Guide*) rather than quantitative LOS metrics [@nacto2016].
+
+**Key limitation:** These approaches, while multimodal in name, remain predominantly US-focused and often treat each mode as a separate silo. They do not inherently support the kind of **cross-modal comparison** that the MMLoS project aims to enable—where one can ask not just "what is the LOS for pedestrians here?" but "how does pedestrian LOS compare to cyclist LOS, in commensurable terms?"
+
+# UK and European Perspectives
+
+The UK has a distinct tradition of transport appraisal that predates and differs from the US LOS model. Core guidance in the UK has long used **"narrow" and "wide" stage assessments** and, more recently, **the "five criteria"** framework (environmental impact, safety, economy, integration, accessibility) in *WebTAG* [@webtag]. These are less about letter-grade LOS and more about multi-criteria decision analysis.
+
+However, active travel appraisal tools in the UK have advanced significantly in recent years:
+
+- The **Propensity to Cycle Tool (PCT)** [@lovelace2016pct] estimates cycling uptake under various scenarios but does not produce a composite LOS score.
+- **ATCycle** and other local tools focus primarily on cycling infrastructure quality rather than multimodal performance.
+- The **Active Travel England (ATE) Scheme Review Tools**—the Route Check Tool and Area Check Tool—assess active travel design quality against a checklist of criteria, effectively producing a pass/fail or rating based on design standards compliance rather than a continuous service measure based on user experience [@govuk_ate_tools].
+
+The ATE "Browse" tool (https://plan.activetravelengland.gov.uk) allows users to overlay scheme sketches with contextual data including collisions and Propensity to Cycle Tool outputs, representing a step toward integrated assessment [@ate_browse].
+
+None of these UK tools, however, implement a true **multi-modal level-of-service metric** in the sense originally conceptualized by US researchers—a single, comparable rating that spans walking, cycling, public transport, and driving.
+
+# Paris and Leading International Examples
+
+International examples offer valuable lessons for MMLoS development. As noted in the inception meeting, Paris has arguably undergone the most dramatic urban transformation toward prioritising pedestrians and cyclists among major global cities.
+
+Under Mayor Anne Hidalgo's administration (2014–2026), Paris implemented an ambitious program of **"vélorues"** (cycling streets), **school street** pedestrianisations, and car lane reductions across major corridors [@guardian_paris_2026]. The city reported a **70% increase in cycling between 2020 and 2024**, with modal share shifting from private cars to walking and cycling across central arrondissements. Notably, public support for these measures grew over time: by 2026, **63% of Parisians supported expanded pedestrian zones** and **72% supported protected cycling infrastructure** [@modacity_paris].
+
+The Paris experience demonstrates that radical shifts in modal perception and use are possible, but also highlights the **political dimension** of MMLoS: changes that improve LoS for pedestrians and cyclists typically reduce LoS (in conventional metrics) for drivers. A robust MMLoS tool must therefore be capable of representing and comparing across these trade-offs rather than reinforcing a car-centric equilibrium.
+
+# Methodological Gaps and Why a New MMLoS Tool is Needed
+
+Extant MMLoS approaches share several limitations that motivate fresh development:
+
+1. **Lack of cross-modal commensurability.** Existing methods generally compute separate letter grades per mode, but provide no principled mechanism for **comparing** the numeric scores underlying those grades. As Guttenplan (2001) observed, the various mode-specific models are based on completely different input variables and regression coefficients, making direct numerical comparison problematic [@guttenplan2001multimodal].
+
+2. **Over-reliance on qualitative, checklist-based assessment.** Many current tools (including ATE's Route Check and Area Check) require expert evaluators to rate facility attributes on discrete scales. While reliable in skilled hands, these methods are labor-intensive, not easily reproducible at scale, and difficult to apply to city-wide networks.
+
+3. **Limited spatial coverage and data availability.** Existing MMLoS implementations typically require detailed geometric data (lane widths, intersection layouts, traffic volumes) that are not consistently available, particularly outside major cities and in international contexts. This limits their utility for network-level screening.
+
+4. **No integration with emerging data sources.** Recent advances—such as **image-based 3D reconstruction** [@trellis3d; @microsoft2024trellis], **citizen science street quality reporting** [@betastreets], and improvements in **OpenStreetMap data completeness and quality** [@barron2014osmnx; @haklay2010osm]—are not yet systematically incorporated into MMLoS frameworks.
+
+5. **Lack of mechanism to aggregate junction and segment-level LOS to area-wide metrics.** Current practices treat links (road segments) and nodes (junctions) separately, yet users experience the entire network, where junction design can determine the effective LOS of an entire corridor.
+
+# Emerging Technologies Relevant to MMLoS
+
+Several technological advances offer pathways to overcome these limitations:
+
+## Image-to-3D Reconstruction
+
+Recent machine learning models like **TRELLIS** [@microsoft2024trellis] can generate structured 3D geometry from a single 2D image. While these tools are primarily developed for content creation, they suggest a route to extracting **approximate 3D street cross-sections** from street-level imagery (Google Street View, Mapillary, KartaView). This could enable MMLoS estimation at scale without requiring expensive LiDAR surveys or detailed CAD models.
+
+The potential yet-to-be-realised is to combine **generative AI 3D reconstruction** with **computer vision infrastructure detection** to automatically estimate key LOS inputs: lane widths, pavement widths, separation barriers, crossing facilities, and even surface quality indicators. The user's comment—"wonder to what extent we can infer surface quality from imagery"—points directly to this research direction.
+
+## Citizen Science and Crowdsourced Data
+
+Platforms like **BetaStreets** [@betastreets] enable community members to record street environments via smartphone video, with the potential for semi-automated extraction of quality metrics. Combined with structure-from-motion (SfM) photogrammetry, such citizen-collected imagery could yield **point cloud measurements** of infrastructure geometry [@ravaglia2024urtrees].
+
+Crowdsourced data offers two advantages for MMLoS: (1) **cost-effective coverage** at network scale, and (2) **ground truth validation** for model outputs. As noted in the inception meeting, "with current phones we can get people to film their street environments which could be more accessible to potential citizen scientists."
+
+## OpenStreetMap and VGI Data Quality
+
+OpenStreetMap (OSM) has emerged as a globally comprehensive, openly licensed vector street network dataset. Recent studies show that in regions with active local mapping communities, OSM road networks achieve completeness comparable to official national datasets [@barron2014osmnx; @haklay2010osm]. Critically for MMLoS, OSM includes **attribute tags** for cycling infrastructure, footways, crossing facilities, traffic calming, and surface type—though coverage and consistency vary widely.
+
+When combined with population density and points of interest as quality indicators [@geomatica2021osm], OSM becomes a viable **base layer** for network-level MMLoS computation. The challenge is to develop scoring functions that can robustly interpret OSM tags into service measures, accounting for missing data and tag ambiguity.
+
+## 3D Street Design and Visualization Tools
+
+Tools such as **Streetmix** [@streetmix] and **3DStreet** [@3dstreet] allow rapid, collaborative creation of street cross-sections in browser-based environments. Their potential contribution to MMLoS is two-fold: first, as **engagement tools** to communicate design trade-offs; second, as **parametric design engines** where geometric variables can be systematically varied to explore their impact on estimated LOS.
+
+As Brian mentioned in the meeting, Streetmix is already used within ATE, and its 3D variants could support visualization of proposed changes alongside predicted LOS shifts.
+
+# Gap Analysis: Toward a "True" Multi-Modal Level of Service
+
+Reviewing the state of the art reveals several avenues where a new MMLoS tool could add value:
+
+| Gap | Current State | Needed Advancement |
+|-----|---------------|-------------------|
+| **Unified scoring across modes** | Separate LOS per mode (A-F per mode); no comparison | Common scale with weights derived from user preference research |
+| **Spatial scalability** | Manual, corridor-by-corridor | Automated computation across city-scale networks |
+| **Data efficiency** | Requires high-quality geometric data | Works with available data (OSM, imagery, sampled counts) |
+| **Integration of emerging data types** | Not used | Incorporate LiDAR scans, photogrammetry, crowdsourced imagery |
+| **Junction modeling** | Treated as nodes; or separate LOS only | Junctional delay and conflict incorporated into link-level LOS |
+| **Design sensitivity** | Qualitative | Quantitative sensitivity analysis: how do dimension changes affect LOS? |
+
+The inception meeting identified a **categorisation framework** that could structure MMLoS computation:
+
+1. **Traffic-Free Links** (e.g., segregated paths)
+2. **Quiet Streets** (low motor traffic)
+3. **Busy Streets** (higher traffic volumes)
+4. **Junctions** (signalised and unsignalised)
+5. **Crossings** (designated crossing facilities)
+6. **Mega-structures** (complex grade-separated interchanges)
+7. **Area-based measures** (School Streets, Low Traffic Neighbourhoods, Pedestrian-Priority Areas)
+
+This taxonomy resembles the HCM's facility-type classification but introduces **qualitative behavioral distinctions** that could inform scoring functions. For example, the models for a "traffic-free link" might rely heavily on path quality and continuity, while "busy streets" would focus on separation and perceived safety.
+
+# Proposed Research Direction
+
+Building on existing frameworks while addressing identified gaps, the MMLoS project will:
+
+1. **Review and synthesise** existing LOS models for each mode, identifying common factors that could serve as **cross-modal anchors** (e.g., effective width, user density, delay).
+2. **Develop an integrated methodology** that produces a **comparable numerical score** rather than just separate letter grades per mode, drawing on stated preference research to establish reasonable relative weights.
+3. **Leverage open data (OSM)** and **automated geometric estimation** from street-level imagery to enable **city-wide application** without requiring expensive new data collection.
+4. **Address junctions explicitly** as areas where cross-modal trade-offs are concentrated, using either simulation or simplified analytical models.
+5. **Validate** the MMLoS measures against case study locations (Leeds; Essex; West Midlands), including ground-truthing with user surveys where feasible.
+6. **Implement a usable tool**—likely a QGIS plugin or web application—that can feed into ATE's existing platform ecosystem.
+
+# Conclusion
+
+The literature reveals substantial prior work on multimodal level of service, particularly in the US (FDOT, NCHRP, TRB) and in UK active travel appraisal. However, none of these existing tools fully meets the needs identified by ATE: an integrated, scalable, and data-efficient method for comparing street quality across **walking, cycling, and public transport** in commensurable terms. The opportunity is to build on this foundation—especially the Florida research and the HCM models—while incorporating advances in data availability, image-based geometry estimation, and open-source implementation that were not available when those earlier methods were developed.
+
+# References
+
+<div id="refs"></div>
+
+# Appendix: Key Documents and Data Sources
+
+## Datasets Under Consideration
+
+1. **OSM Multi-modal Routing Network (OSM-RN)** – provides average speeds, road widths
+2. **OSM Tag Data** – crossing types, cycle infrastructure, surface quality
+3. **OpenStreetMap Changesets** – temporal analysis of network evolution
+4. **DfT Road Traffic Statistics** – volumes and vehicle classifications
+5. **National Travel Survey** – mode choice reasons and travel patterns
+6. **Census / Census Data** – population, commuting flows
+7. **Propensity to Cycle Tool Data** – existing cycle uptake estimates
+8. **STATS19** – road traffic collision data (pedestrians, cyclists, horse riders)
+9. **Bus Open Data Service (BODS)** – stop & route-level timetabled and actual running times
+10. **Transport Focus Bus Satisfaction Surveys** – user-reported quality scores
+
+## Tools Mentioned
+
+- **ATE Route Check Tool** – audits linear designs against safety and quality metrics
+- **ATE Area Check Tool** – evaluates area-based interventions
+- **ATE Browse Tool** – map-based viewer overlaying scheme sketches with contextual data
+- **Plan.activetravelengland.gov.uk** – Sketch and Browse tools for scheme design and review

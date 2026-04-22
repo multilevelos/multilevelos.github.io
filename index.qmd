@@ -1,0 +1,76 @@
+---
+title: "Multi-Modal Level of Service (MMLoS)"
+description-meta: "Research project developing a multi-modal level-of-service measurement framework and tool for Active Travel England"
+image: "files/images/mmlos-hero.svg"
+page-layout: custom
+---
+
+::: {.landing-shell}
+
+::: {.landing-profile .landing-panel}
+<div class="landing-logo">
+![](files/images/mmlos-logo.svg){width="120px"}
+</div>
+
+## MMLoS – Multi-Modal Level of Service {.landing-title}
+
+<div class="landing-tagline">
+Measuring street quality across **walking, cycling, public transport, and driving** in a single, comparable framework.
+</div>
+
+::: {.landing-actions}
+[**Learn About the Project**]{.btn .btn-primary .btn-lg}[About]{.button}
+[**View Team**]{.btn .btn-outline .btn-lg}[Team]{.button}
+[**Read the Review**]{.btn .btn-outline .btn-lg}[Research]{.button}
+:::
+
+<div class="landing-status">
+🚧 **In Progress** — Research phase (Apr 2026 – Sep 2027) · Funded by Active Travel England
+</div>
+:::
+
+::: {.landing-grid}
+
+::: {.landing-card .landing-panel}
+### 🎯 Project Goal
+
+Develop a robust, evidence-based **Multi-Modal Level of Service (MMLoS) tool** that enables policymakers and practitioners to evaluate how streets support sustainable and active transport modes—walking, cycling, public transit—in a **commensurable** way alongside motor traffic.
+
+Key output: a working proof-of-concept web application usable by local authorities and Active Travel England.
+:::
+
+::: {.landing-card .landing-panel}
+### 🔍 Why MMLoS Matters
+
+Current appraisal tools (like the Highway Capacity Manual's LOS or ATE's checklists) either:
+
+- Focus narrowly on **vehicle throughput** (traditional LOS), or
+- Use **checklist-style scoring** that doesn't produce a continuous, comparable measure
+
+MMLoS fills the gap: a **single numerical score** (or set of scores) that meaningfully compares quality across modes, exposing trade-offs and guiding balanced investment.
+:::
+
+::: {.landing-card .landing-panel}
+### 🛠️ Approach
+
+We are combining:
+
+1. **Literature synthesis** — reviewing US FDOT/NCHRP methods, UK WebTAG, European practice
+2. **Data innovation** — leveraging OpenStreetMap, street imagery, and potentially citizen science data
+3. **Case study validation** — Leeds, Essex, West Midlands (three diverse contexts)
+4. **Tool development** — web app + open-source implementation
+
+The project is a collaboration between **University of Westminster (Active Travel Academy)** and **University of Leeds (Institute for Transport Studies)**, advised by a Steering Group including local authority partners.
+:::
+
+::: {.landing-card .landing-panel}
+### 🔗 Related Content
+
+- **Literature review** — Comprehensive review of existing MMLoS frameworks, gaps, and emerging technologies (TRELLIS image-to-3D, BetaStreets citizen science, OSM quality)
+- **Bid Documentation** — Full research proposal (February 2026)
+- **GitHub Organisation** — Code, data, and methods: [multilevelos](https://github.com/multilevelos)
+:::
+
+:::
+
+:::

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <style>
+    text { font-family: system-ui, sans-serif; font-weight: 600; }
+    .mmlos { fill: #2c3e50; }
+    .accent { fill: #3498db; }
+  </style>
+  <text x="5" y="38" class="mmlos" font-size="24">MMLoS</text>
+  <text x="85" y="38" class="accent" font-size="20">Multi-Modal Level of Service</text>
+</svg>

@@ -1,0 +1,86 @@
+project:
+  type: website
+  output-dir: _site
+
+# Meta
+description-meta: "Multi-Modal Level of Service (MMLoS) Research Project – Active Travel England"
+author-meta: "University of Westminster (Active Travel Academy) & University of Leeds (Institute for Transport Studies)"
+
+website:
+  title: "MMLoS – Multi-Modal Level of Service"
+  image: "files/images/logo.svg"
+  description: "Research project developing a multi-modal level-of-service measurement framework and tool for Active Travel England"
+  site-url: "https://multilevelos.github.io"
+
+  navbar:
+    background: light
+    pinned: false
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Project
+        menu:
+          - text: Overview
+            href: about.qmd
+          - text: Team
+            href: team.qmd
+          - text: Approach
+            href: approach.qmd
+      - text: Research
+        href: research.qmd
+      - text: Updates
+        href: updates.qmd
+      - text: Tools
+        href: tools.qmd
+
+    right:
+      - icon: github
+        href: https://github.com/multilevelos
+        target: _blank
+      - icon: code
+        href: https://github.com/multilevelos/multilevelos.github.io
+        target: _blank
+
+  page-footer:
+    left: "MMLoS Project &copy; <script>document.write(new Date().getFullYear())</script>"
+    center: "Built with [Quarto](https://quarto.org)"
+    right:
+      - icon: github
+        href: https://github.com/multilevelos
+        target: _blank
+
+  draft-mode: unlinked
+  repo-url: https://github.com/multilevelos/multilevelos.github.io
+
+  open-graph: true
+  twitter-card: true
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+      - styles.scss
+    toc: true
+    toc-location: left
+    toc-depth: 2
+    footnotes-hover: true
+    code-copy: true
+    code-link: false
+    link-external-icon: false
+    link-external-newwindow: true
+    fig-align: center
+    page-layout: full
+
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    documentclass: report
+
+execute:
+  echo: false
+  warning: false
+  message: false

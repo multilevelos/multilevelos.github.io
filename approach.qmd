@@ -1,0 +1,160 @@
+---
+title: "Methodology & Approach"
+description-meta: "Technical approach for developing the Multi-Modal Level of Service framework"
+---
+
+# Methodology: Building a "True" Multi-Modal Level of Service
+
+## The Core Challenge
+
+Existing MMLoS approaches (NCHRP 616, FDOT QLOS) compute **separate letter grades per mode** (A–F for auto, transit, bike, pedestrian). While useful, these separate scores do not answer the fundamental planning question: *which mode is better served on this street?*
+
+The US DoT researchers Martin Guttenplan et al. (2001) noted this limitation:
+
+> "The principal weakness of existing MMLoS measures is that they treat each mode as unique, resulting in a lack of **commensurability**" [@guttenplan2001multimodal].
+
+Our approach aims to **bridge across modes** by identifying common attributes and establishing calibrated scales that allow direct comparison.
+
+## Seven-Stage Methodology
+
+The project follows an iterative, seven-stage approach adapted from the original bid proposal.
+
+### Stage 1: Steering Group & Case-Study Selection
+Agree case-study locations including:
+- **One dense urban area** — Leeds (strong local knowledge, existing data)
+- **One rural/small-town area** — Essex County Council (diverse geography)
+- **One mixed urban-regional corridor** — West Midlands
+
+Each site will have good-quality multi-modal traffic data, either already held by the team or accessible through local authority partners.
+
+### Stage 2: Literature & Technology Review
+
+Two parallel reviews:
+- **Academic literature** on LoS measurement across all modes
+- **Technology scan** — data collection methods (LiDAR, photogrammetry), software (OSMnx, network analysis tools), AI methods (image-to-3D)
+
+Deliverable: brief report summarising state of the art and technology readiness.
+
+### Stage 3: Data Review, Collection, and Collation
+
+We will assemble and evaluate data sources:
+
+| Source | Content | Anticipated Role |
+|--------|---------|-----------------|
+| **OSM (OpenStreetMap)** | Network topology, tagging for cycling, crossings, surfaces | Base layer for network-level assessment |
+| **OSM-RN (OS Multi-modal Routing Network)** | Average speeds, max speeds, road widths | Supplementary geometric attributes |
+| **STATS19** | Collision records by mode | Safety proxy (crash history) |
+| **BODS (Bus Open Data Service)** | Timetables, stop locations, punctuality | Transit service quality |
+| **DfT Traffic Counts** | AADF by vehicle class | Motor traffic exposure |
+| **National Travel Survey** | Trip purposes, mode choice reasons | Contextual travel behaviour |
+| **Propensity to Cycle Tool** | Existing cycle uptake estimates | Cycling potential baseline |
+| **LiDAR scans (IFP-r)** | High-accuracy 3D geometry at sample sites | Ground-truth calibration |
+
+Where local authority partners have additional data (traffic signal timings, sensor counts, user surveys), we will incorporate these into the case study validation.
+
+### Stage 4: Tool Development — Method Design
+
+This is the technical core, comprising four sub-steps:
+
+#### 4.1 Preliminaries — Reference Users & Mode Definitions
+
+Define a set of **reference user profiles** reflecting the diversity of travellers:
+
+- Child (8–12) walking to school
+- Adult cycling for utility
+- Wheelchair user
+- Older adult using bus
+- Adult driver (car)
+
+Simultaneously, clarify **mode definitions**: does "cycling" include e-scooters? Does "public transport" cover on-demand services? These decisions affect scoring.
+
+#### 4.2 Determining Common Attributes
+
+From the literature review, compile mode-specific attribute long-lists and distil them into **common constructs**:
+
+| Construct | Auto Analogue | Pedestrian Analogue | Cyclist Analogue | Transit Analogue |
+|-----------|---------------|--------------------|------------------|------------------|
+| **Delay** | Signal delay | Crossing wait time | Stop delay | Headway / wait time |
+| **Width/space** | Lane width | Sidewalk width | Cycle track width | Platform / stop width |
+| **Separation** | Lane separation | Buffer from traffic | Physical barrier | Stop shelter / waiting area |
+| **Surface quality** | Pavement condition | Pavement quality | Path surface | Stop surface quality |
+| **Conflict risk** | Interaction with other modes | Crossing distance | Junction complexity | Boarding/alighting conflict |
+
+#### 4.3 Calibration of Common Attributes
+
+Raw attribute values (e.g., "2.5 m sidewalk width") must be converted to a **common numeric scale** (e.g., 1–5). We will:
+
+- Use **stated preference surveys** where available (DfT Values of Time, walking/cycling preference studies)
+- Leverage **existing LOS calibration studies** (e.g., FDOT's work on pedestrian LOS thresholds)
+- Conduct **local user surveys** in case-study areas if needed to validate thresholds
+
+Each common attribute receives a weight reflecting its relative importance to overall MMLoS. Weights may vary by context (urban vs rural, school zone vs arterial).
+
+#### 4.4 Integration of Mode-Specific Attributes
+
+Some attributes are inherently mode-specific:
+- **Ease of crossing** (primarily pedestrian/wheelchair)
+- **Hilliness / gradient** (walking, cycling)
+- **Frequency of service** (transit only)
+- **Parking provision** (drivers)
+
+We will incorporate these without breaking cross-modal comparability, using normalisation approaches such that their addition shifts the overall distribution in a controlled way (see full literature review for the normalisation strategy).
+
+### Stage 5: Proof of Concept
+
+Test the framework across **three scenarios of increasing complexity**:
+
+- **Scenario 1 — simple links:** Parallel facilities without conflicts (baseline attribution)
+- **Scenario 2 — links with flows:** Incorporate volume effects (how user density degrades LOS)
+- **Scenario 3 — junctions:** Add crossing delays, conflict points, multi-modal interaction
+- **Scenario 4 — routes:** Aggregate link + junction scores along a corridor
+- **Scenario 5 — what-if:** Compare status quo vs design interventions
+
+Results will be validated against:
+- **Expert assessment** (Design Advisory Group review)
+- **Ground-truth surveys** (where available)
+- **Stated preference comparisons** (do predicted LOS shifts align with user-reported quality?)
+
+### Stage 6: Web-Based Tool Development
+
+A standalone web application enabling:
+
+- **Interactive map exploration** of MMLoS across a city network
+- **Scheme sketching** — draw proposed changes (new crossing, cycle track) and see predicted score shifts
+- **Report generation** — summary metrics for use in business cases
+- **Data export** — JSON/GeoJSON for integration into other ATE tools
+
+Technology choices:
+- **Frontend:** JavaScript/TypeScript web app (likely Svelte or similar lightweight framework)
+- **Backend (optional):** Python FastAPI for computation-intensive scenarios, or static pre-computation where feasible
+- **Hosting:** Deployable on UK government cloud or as open-source tool for local installation
+
+### Stage 7: Documentation & Handover
+
+Comprehensive documentation covering:
+
+- **Method specification** — algorithm details, formulas, parameter values
+- **Data requirements** — minimum viable dataset vs enhanced dataset
+- **User guide** — step-by-step instructions for practitioners
+- **Developer guide** — for future enhancement and maintenance
+- **Limitations and assumptions** — explicit bounds of applicability
+
+Outputs will be transferred to Active Travel England for ongoing adoption.
+
+## Design Philosophy
+
+### Start Simple, Add Complexity
+
+We follow the principle: **"start simple and add complexity later"**. The initial model will use readily available data (OSM, counts) and a core set of attributes. Enhanced versions can incorporate imagery-based geometry extraction, LiDAR calibration, and dynamic trafficassignment.
+
+### Cross-Modal Comparability
+
+The defining feature of our MMLoS approach is a **single scoring scale** that allows "apples-to-apples" comparison of how a street serves different modes. A score of 3.2 for pedestrians and 2.8 for cyclists indicates the street is quantitatively better for walking—something current LOS frameworks do not clearly express.
+
+### Open & Reproducible
+
+All code will be open-source (MIT or Apache 2.0 license), and data processing steps documented. The tool will be designed to work with open data (OSM, BODS, STATS19) so that any local authority can run it without proprietary licences.
+
+---
+
+*For detailed literature underpinning this methodology, see the [Research](/research.qmd) section.*
